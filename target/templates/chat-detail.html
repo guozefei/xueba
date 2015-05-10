@@ -1,0 +1,94 @@
+<ion-view hide-nav-bar="true" class="xb-detail" cache-view="false">
+    <ion-header-bar>
+        <div class="xb-header">
+            <img class="logo" src="img/ynote_logo.png" alt=""/>
+            <img class="logo" src="img/xueba_logo.png" alt=""/>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="user">
+            <div class="user-photo">
+                <img class="user-image" ng-src="{{xueba.photo}}"/>
+            </div>
+            <div class="user-detail">
+                <div class="user-name">
+                    <i class="user-name-icon icon"></i>
+                    <div class="user-name-text ellipsis">{{xueba.name}}</div>
+                </div>
+                <div class="user-school">
+                    <i class="icon-user-campus icon"></i>
+                    <div class="user-school-text ellipsis">{{xueba.university}}</div>
+                </div>
+                <div class="user-academy">
+                    <i class="icon-user-academy icon"></i>
+                    <div class="user-academy-text ellipsis">
+                        {{xueba.admissionYear}}级&nbsp;{{xueba.major}}专业
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-messages">
+            <div class="user-notes-num">
+                <i class="icon-note icon"></i>
+                <div class="user-note-num-text">
+                    <span class="text">{{noteCount}}</span>门课程笔记
+                </div>
+            </div>
+            <div class="user-view-times">
+                <i class="icon ion-search user-search-icon"></i>
+                <div class="user-note-search-text">
+                    <span class="text">{{pvCount}}</span>次浏览
+                </div>
+            </div>
+            <div class="user-star-times">
+                <i class="icon ion-star user-star-icon"></i>
+                <div class="user-note-star-text">
+                    <span class="text">{{shareCount}}</span>次收藏
+                </div>
+            </div>
+        </div>
+        <div class="account-note-cards">
+            <div class="user-note-card" ng-click="toShare(note)" ng-repeat="note in noteList">
+                <div class="note-detail">
+                    <div class="note-name">
+                        <i class="icon-note-message icon"></i>
+                        <div class="note-name-text ellipsis">《{{note.title}}》</div>
+                    </div>
+                    <div class="note-desc">
+                        <div class="note-desc-text">{{note.description}}</div>
+                    </div>
+                </div>
+                <div class="note-message">
+                    <a class="tab-item" href="#">
+                        <div class="account-search-text">
+                            浏览<span class="blue">{{note.pvCount}}</span>
+                        </div>
+                    </a>
+                    <a class="tab-item" href="#">
+                        <div class="account-star-text">
+                            收藏<span class="blue">{{note.shareCount}}</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="empty" ng-if="noteList.length === 0">
+                <p>还没有上传笔记</p>
+                <p>（请前往PC或Web版上传笔记）</p>
+            </div>
+        </div>
+    </ion-content>
+    <div class="detail-tab">
+        <div class="detail-tab-item" ui-sref="tab.dash.hot">
+            <icon class="home-page detail-tab-icon"></icon>
+            <div class="home-text text">首页</div>
+        </div>
+        <div class="detail-tab-item" ui-sref="tab.chats">
+            <icon class="gallery-page detail-tab-icon"></icon>
+            <div class="gallery-text text">笔记库</div>
+        </div>
+        <div class="detail-tab-item" ng-click="refresh()">
+            <icon class="register-page detail-tab-icon"></icon>
+            <div class="register-text text">{{thirdIcon}}</div>
+        </div>
+    </div>
+</ion-view>

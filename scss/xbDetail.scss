@@ -1,0 +1,242 @@
+.xb-detail {
+  .user {
+//    height: 4.0525rem;
+    height: 80px;
+    border-bottom: 1px solid #d1d1d1;
+    .user-photo {
+      width: 30%;
+      display: inline-block;
+      position: relative;
+      .user-image {
+//        width: 3.039375rem;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 0px;
+        top: -11px;
+        border-radius: 50%;
+      }
+    }
+    .user-detail {
+      display: inline-block;
+      position: absolute;
+      left: 35%;
+      top: 3.5px;
+      width: 65%;
+      .user-name {
+        .user-name-icon {
+          display: inline-block;
+          height: 18px;
+          width: 18px;
+          background-image: url('../img/user_name_active.png');
+        }
+        .user-name-text {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: bold;
+          vertical-align: top;
+          color: #3983ff;
+          max-width: 80%;
+        }
+      }
+      .user-school {
+        .icon-user-campus {
+          margin-top: 2.5px;
+        }
+        .user-school-text {
+          display: inline-block;
+          font-size: 11px;
+          vertical-align: top;
+          max-width: 80%;
+        }
+      }
+      .user-academy {
+        .icon-user-academy {
+          display: inline-block;
+          height: 16px;
+          width: 16px;
+          background-image: url('../img/join_page.png');
+          margin-top: 5px;
+        }
+        .user-academy-text {
+          display: inline-block;
+          font-size: 11px;
+          vertical-align: top;
+          max-width: 80%;
+        }
+      }
+    }
+  }
+
+  .user-messages {
+    height: 33px;
+    position: relative;
+    border-bottom: 1px solid #d1d1d1;
+    .user-notes-num {
+      display: inline-block;
+      width: 34%;
+      margin-left: 8px;
+      margin-top: 6px;
+      .icon-note {
+        display: inline-block;
+        height: 14px;
+        width: 14px;
+        background-image: url('../img/gallery_page.png');
+      }
+      .user-note-num-text {
+        display: inline-block;
+        color: #384157;
+        font-size: 13px;
+      }
+    }
+    .user-view-times {
+      display: inline-block;
+      position: absolute;
+      left: 34%;
+      width: 34%;
+      text-align: center;
+      margin-top: 6px;
+      .user-search-icon {
+        display: inline-block;
+      }
+      .user-note-search-text {
+        display: inline-block;
+        color: #384157;
+        font-size: 13px;
+      }
+    }
+    .user-star-times {
+      display: inline-block;
+      position: absolute;
+      left: 68%;
+      width: 32%;
+      text-align: center;
+      margin-top: 6px;
+      .user-star-icon {
+        display: inline-block;
+      }
+      .user-note-star-text {
+        display: inline-block;
+        color: #384157;
+        font-size: 13px;
+      }
+    }
+    .text {
+      color: #3983ff;
+    }
+  }
+  .account-note-cards {
+    position: relative;
+    .empty {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .user-note-card {
+      height: 75px;
+      border-bottom: 1px solid #d1d1d1;
+      background-color: #f9f8f8;
+    }
+    .user-note-card:last-child {
+      margin-bottom: 51px;
+    }
+    .note-detail {
+      position: absolute;
+      padding-top: 5px;
+      padding-left: 8px;
+      width: 70%;
+      .note-name {
+        .icon-note-message {
+          display: inline-block;
+          height: 14px;
+          width: 14px;
+          margin-top: 3px;
+          vertical-align: top;
+          background-image: url('../img/gallery_page.png');
+        }
+        .note-name-text {
+          display: inline-block;
+          color: #384157;
+          font-size: 16px;
+          font-weight: bold;
+          max-width: 85%;
+        }
+      }
+      .note-desc {
+        margin-left: 25px;
+        width: 95%;
+        .note-desc-text {
+          display: block; /* Fallback for non-webkit */
+          display: -webkit-box;
+          max-width: 400px;
+          height: 40px; /* Fallback for non-webkit */
+          margin: 0 auto;
+          font-size: 14px;
+          line-height: 1.43;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .note-message {
+      width: 20%;
+      position: absolute;
+      left: 80%;
+      margin-top: 17px;
+      .tab-item {
+        text-align: left;
+      }
+      .account-search-text, .account-star-text {
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+        color: #434c50;
+        font-weight: bold;
+      }
+    }
+    .blue {
+      color: #3981fd;
+    }
+  }
+  .ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;-icab-text-overflow:ellipsis;-khtml-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-webkit-text-overflow:ellipsis;}
+
+  .detail-tab {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 51px;
+    padding-left: 2%;
+    padding-top: 2px;
+    background-color: #f9f8f8;
+    border-top: 1px solid #d1d1d1;
+    .detail-tab-item {
+      display: inline-block;
+      width: 32%;
+      text-align: center;
+      .home-page {
+        background-image: url('../img/home_page.png');
+      }
+      .gallery-page {
+        background-image: url('../img/gallery_page.png');
+      }
+      .register-page {
+        background-image: url('../img/join_page.png');
+        width: 35px;
+      }
+      .text {
+        font-size: 12px;
+        margin-top: -3px;
+        color: #6c7a81;
+      }
+    }
+    .detail-tab-icon {
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 28px;
+      height: 28px;
+      margin: auto;
+    }
+  }
+}

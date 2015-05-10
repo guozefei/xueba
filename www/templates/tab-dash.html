@@ -1,0 +1,24 @@
+<ion-view hide-nav-bar="true" view-title="首页"  class="gray note" cache-view="false">
+    <ion-header-bar>
+        <div class="xb-header">
+            <img class="logo" src="img/ynote_logo.png" alt=""/>
+            <img class="logo" src="img/xueba_logo.png" alt=""/>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div>
+            <img class="home-header" src="img/xueba_wanted.png" ui-sref="tab.account" alt=""/>
+        </div>
+
+        <ul class="xb-mid-bar">
+            <li>
+                <i class="icon icon-hotestnote" ui-sref="tab.dash.hot" ng-class="{selected : isHot}" ng-click="showHot()"></i>
+            </li>
+            <li>
+                <i class="icon icon-newestnote" ui-sref="tab.dash.new" ng-class="{selected : !isHot}" ng-click="showNew()"></i>
+            </li>
+        </ul>
+        <ion-nav-view name="tab-dash-note" class="dash"></ion-nav-view>
+        <ion-infinite-scroll spinner="android" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

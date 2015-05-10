@@ -1,0 +1,252 @@
+.xb-account {
+  .xb-login-image {
+    position: relative;
+    img {
+      display: block;
+    }
+    .xb-login-desc {
+      width: 100%;
+    }
+    .xb-login-knowmore {
+      position: absolute;
+      bottom: 30px;
+      width: 25%;
+      text-align:center;
+      left: 37.5%;
+      color: white;
+      font-size: 18px;
+      text-decoration: underline;
+    }
+    .xb-share-button {
+      position: absolute;
+      left: 30%;
+      width: 40%;
+      top: 40%;
+    }
+  }
+  .xb-login {
+    width: 100%;
+    background-color: #2793ff;
+    padding-bottom: 2%;
+    margin-bottom: 20px;
+    .xb-login-header {
+      width: 100%;
+      margin-bottom: 10px;
+      .xb-login-header-img {
+        width: 100%;
+      }
+    }
+    .xb-login-body {
+      .login-container {
+        position: relative;
+        left: 10%;
+        width: 80%;
+      }
+    }
+    .xb-login-footer {
+      margin-top: 20px;
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  .login {
+    position: relative;
+    background-color: #2793ff;
+    .login-background {
+      width: 100%;
+    }
+    .login-button {
+      position: absolute;
+      top: 17%;
+      width: 55%;
+      left: 22.5%;
+    }
+  }
+  .logged {
+    position: relative;
+    background-color: #2793ff;
+    input, select {
+      height: 25px;
+    }
+    .logged-container {
+      border-radius: 5px;
+      background-color: #bfdfff;
+      padding: 10px;
+      color: #4c5468;
+      .user-account {
+        white-space: nowrap;
+        .user-account-key {
+          width: 39%;
+          min-width: 120px;
+          vertical-align: middle;
+        }
+        .user-account-value {
+          max-width: 50%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin: 0;
+        }
+      }
+      .user-photo {
+        height: 80px;
+        .photo-left {
+          vertical-align: top;
+        }
+        .photo-right {
+          position: relative;
+          left: 5%;
+          top: 0px;
+          display: inline-block;
+          .user-image {
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+          }
+          .fileUpload {
+            position: absolute;
+            display: inline-block;
+            background: #eeeeee;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+            left: 80px;
+            top: 10px;
+            width: 82px;
+          }
+          .fileUpload input.upload {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+          }
+          .over-size {
+            position: absolute;
+            top: 42px;
+            left: 85px;
+            width: 90px;
+            font-size: 8px;
+            color: #1E88c7;
+          }
+        }
+      }
+      .user-message {
+        position: relative;
+        margin-bottom: 5px;
+        .user-message-value {
+          position: relative;
+          left: 5%;
+          width: 70%;
+        }
+        .school {
+          position: absolute;
+          background: white;
+          z-index: 10;
+          left: 0;
+          width: 100%;
+          max-height: 200px;
+          .school-list {
+
+          }
+        }
+        .year, .academy {
+          border: none;
+          border-radius: 5px;
+          height: 25px;
+        }
+        .school-left {
+          vertical-align: top;
+        }
+        .school-right {
+          width: 70%;
+          position: relative;
+          left: 5%;
+          display: inline-block;
+          .school-value {
+            left: 0;
+            width: 100%;
+          }
+          .school-tip {
+            text-align: left;
+          }
+        }
+      }
+      .item-key, .item-value {
+        display: inline-block;
+      }
+      .item-key {
+        width: 20%;
+        text-align: right;
+        min-width: 60px;
+      }
+      .tip {
+        color: #0b75c2;
+        text-align: right;
+        width: 95%;
+        margin-bottom: 5px;
+      }
+      .xueba-why {
+        padding-left: 3%;
+        .xueba-why-reason {
+          width: 97%;
+          height: 60px;
+        }
+      }
+      .submit-button {
+        position: relative;
+        top: 10px;
+        left: 22.5%;
+        width: 55%;
+      }
+      .xueba-qq-group {
+        position: relative;
+        margin-top: 10px;
+        color: #0b75c2;
+        text-align: center;
+      }
+      input {
+        border-radius: 5px;
+      }
+    }
+  }
+  .share-animation {
+    position: absolute;
+    .share-people {
+      width: 148px;
+      height: 194px;
+      background: url('../img/share_people.png') no-repeat;
+      background-size: 148px auto;
+      position: absolute;
+      bottom: 41%;
+      -webkit-animation: my_animation 2s linear infinite;
+    }
+    .share-background {
+      width: 100%;
+    }
+  }
+  &.animationDisplaying {
+    ion-header-bar {
+      opacity: 0.3;
+    }
+    ion-content {
+      opacity: 0.3;
+    }
+  }
+}
+
+@-webkit-keyframes my_animation {
+  0% {left: 0; bottom: 0%; background-size: 148px auto;}
+  100% {left: 44%; bottom: 48%; background-size: 120px auto;}
+}

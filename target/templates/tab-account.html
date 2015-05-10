@@ -1,0 +1,38 @@
+<ion-view hide-nav-bar="true" view-title="我要当学霸" class="xb-account" ng-class="{animationDisplaying: showAnimation}">
+    <ion-header-bar ng-show="!fromXuebaGame">
+        <div class="xb-header">
+            <img class="logo" src="img/ynote_logo.png" alt=""/>
+            <img class="logo" src="img/xueba_logo.png" alt=""/>
+        </div>
+    </ion-header-bar>
+  <ion-content>
+      <div class="xb-login-image">
+          <img class="xb-login-desc" src="img/xuebaGameHead.png" alt="" ng-if="fromXuebaGame"/>
+          <img class="xb-login-desc" src="img/xueba_wanted.png" alt=""/>
+          <img class="xb-login-desc" src="img/xueba_what.png" alt=""/>
+          <img class="xb-login-desc" src="img/xueba_description.png" alt=""/>
+          <div class="xb-login-knowmore" ui-sref="inspire">了解更多</div>
+      </div>
+      <div class="xb-login">
+          <div class="xb-login-header">
+              <img class="xb-login-header-img" src="img/xb_login_head.png" alt=""/>
+          </div>
+          <div class="xb-login-body">
+              <ion-nav-view name="tab-account-login" class="login-container"></ion-nav-view>
+          </div>
+          <div class="xb-login-footer" ng-if="inLoggedPage">
+              <p>*注意： 提交后，请用电脑登陆</p>
+              <p>note.youdao.com/xueba</p>
+              <p>上传笔记后才能参与活动哟</p>
+          </div>
+      </div>
+      <div class="xb-login-image"  ng-if="fromXuebaGame">
+          <img class="xb-login-desc" src="img/xuebaGameFoot.png" alt=""/>
+          <img class="xb-share-button" src="img/xuebaGameShareButton.png" alt="" ng-click="share()"/>
+      </div>
+  </ion-content>
+  <div class="share-animation" ng-if="showAnimation" ng-click="$parent.hideShare()">
+      <img class="share-background" src="img/share_bg.png"/>
+      <div class="share-people"></div>
+  </div>
+</ion-view>

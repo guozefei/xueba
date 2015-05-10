@@ -1,0 +1,109 @@
+<ion-view view-title="笔记库" hide-nav-bar="true" class="gallery" cache-view="false">
+    <ion-header-bar>
+        <div class="xb-header">
+            <img class="logo" src="img/ynote_logo.png" alt=""/>
+            <img class="logo" src="img/xueba_logo.png" alt=""/>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list list-inset xb-search-bar">
+            <label class="item item-input">
+                <input type="text" id="search" placeholder="输入学校名、专业名、学霸名、课程名进行搜索" ng-model="$parent.keyword">
+                <button class="button search-button" on-tap="search();$event.stopPropagation();$event.preventDefault();" >
+                    <i class="icon icon-search"></i>
+                </button>
+            </label>
+        </div>
+
+        <div class="note-cards" ng-if="noteList.length > 0">
+            <div class="cards-container">
+                <div class="left-cards">
+                    <div class="left-note card note-card" ng-repeat="note in leftNoteList">
+                        <div>
+                            <div class="row note-title" ng-click="toShare(note)">
+                                <span>《{{note.title}}》</span>
+                            </div>
+                            <div class="row" ng-click="$event.stopPropagation();" ui-sref="detail({userId : note.xueba.userId})">
+                                <div class="col-33 avatar-container">
+                                    <img class="user-avatar" ng-src="{{note.xueba.photo}}"
+                                         alt="{{note.title}}"/>
+                                </div>
+                                <div class="col-67">
+                                    <div class="row user-name-container">
+                                        <i class="icon icon-user-name"></i>
+                                        <span>{{note.xueba.name}}</span>
+                                    </div>
+                                    <div class="row user-campus-container">
+                                        <i class="icon icon-user-campus"></i>
+                                        <span>{{note.xueba.university}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-body" ng-click="toShare(note)">
+                            <div>
+                                {{note.description}}
+                            </div>
+                        </div>
+
+                        <div class="note-footer">
+                            <div class="view-times">
+                                <i class="icon icon-view-times"></i>
+                                浏览{{note.pvCount}}
+                            </div>
+                            <div class="star-times">
+                                <i class="icon icon-star-times"></i>
+                                收藏{{note.shareCount}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-cards">
+                    <div class="right-note card note-card" ng-repeat="note in rightNoteList">
+                        <div>
+                            <div class="row note-title" ng-click="toShare(note)">
+                                <span>《{{note.title}}》</span>
+                            </div>
+                            <div class="row" ng-click="$event.stopPropagation();" ui-sref="detail({userId : note.xueba.userId})">
+                                <div class="col-33 avatar-container">
+                                    <img class="user-avatar" ng-src="{{note.xueba.photo}}"
+                                         alt="{{note.title}}"/>
+                                </div>
+                                <div class="col-67">
+                                    <div class="row user-name-container">
+                                        <i class="icon icon-user-name"></i>
+                                        <span>{{note.xueba.name}}</span>
+                                    </div>
+                                    <div class="row user-campus-container">
+                                        <i class="icon icon-user-campus"></i>
+                                        <span>{{note.xueba.university}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-body" ng-click="toShare(note)">
+                            <div>
+                                {{note.description}}
+                            </div>
+                        </div>
+
+                        <div class="note-footer">
+                            <div class="view-times">
+                                <i class="icon icon-view-times"></i>
+                                浏览{{note.pvCount}}
+                            </div>
+                            <div class="star-times">
+                                <i class="icon icon-star-times"></i>
+                                收藏{{note.shareCount}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="empty" ng-if="noResult">
+            抱歉，未搜索到结果
+        </div>
+        <ion-infinite-scroll on-infinite="loadMore()" spinner="android" distance="1%"> </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

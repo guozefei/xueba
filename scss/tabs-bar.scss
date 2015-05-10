@@ -1,0 +1,45 @@
+.xb-bottom-tabs {
+    .tab-title {
+        display: block;
+        margin-top: 2px;
+    }
+
+    .tabs {
+        height: 49px;
+        padding-top: 2px;
+    }
+
+    .tab-item-active {
+        .tab-title {
+            color: #3883FF;
+        }
+    }
+}
+
+.xb-header {
+    margin: 5px auto;
+    width: 50%;
+    min-width: 240px;
+    .logo {
+        display: inline-block;
+        width: 40%;
+        margin-right: 2%;
+    }
+}
+
+
+.xb-mid-bar {
+    margin: 5px auto;
+    width: 70%;
+    height: 25px;
+    text-align: center;
+  display: block;
+    li {
+        width: 40%;
+        height: 100%;
+        display: inline-block;
+        &:first-child {
+            margin-right: 10%;
+        }
+    }
+}

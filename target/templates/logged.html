@@ -1,0 +1,58 @@
+<div class="logged">
+    <div class="logged-container">
+        <div class="user-account">
+            <p class="item-key user-account-key"> 有道云笔记账号：&nbsp;</p><p class="item-value user-account-value" ng-bind="user.userId"></p>
+        </div>
+        <div class="user-message">
+            <p class="item-key"> 真实姓名</p>
+            <input type="text" class="item-value user-message-value" ng-model="name">
+        </div>
+        <div class="user-photo user-message">
+            <p class="item-key photo-left">头像</p>
+            <div class="photo-right">
+                <img class="user-image" ng-src="{{user.photo}}"/>
+                <div class="fileUpload btn btn-primary">
+                    <span>上传头像</span>
+                    <input type="file" class="upload" id="photo" name="'image'"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-message">
+            <p class="item-key school-left"> 学校</p>
+            <div class="school-right">
+                <input type="text" class="item-value user-message-value school-value" ng-model="school">
+                <ion-scroll delegate-handle="small" class="school" ng-show="schools.length > 0 && school != undefined && school != '' && showMoreSchool">
+                    <ul class="school-ul">
+                        <li class="school-li" ng-repeat="school in schools">
+                            <div class="school-name" ng-click="selectSchool(school)">{{school.name}}</div>
+                        </li>
+                    </ul>
+                </ion-scroll>
+                <div class="tip school-tip">仅在校生参与</div>
+            </div>
+        </div>
+
+        <div class="user-message">
+            <p class="item-key"> 入学年份</p>
+            <select class="item-value user-message-value year" ng-options="year for year in years" ng-model="year"></select>
+        </div>
+        <div class="user-message">
+            <p class="item-key"> 专业</p>
+            <select class="item-value user-message-value academy" ng-options="academy for academy in academies" ng-model="major" ng-click="selectMajor()"></select>
+        </div>
+        <div class="user-message">
+            <p class="item-key"> 手机</p>
+            <input type="text" class="item-value user-message-value" ng-model="phone">
+        </div>
+        <div class="tip">请准确填写，方便我们发放礼品</div>
+        <div class="xueba-why">
+            <div class="xueba-why-text">一句话告诉我们你为什么是学霸</div>
+            <textarea class="xueba-why-reason" ng-model="reason">
+
+            </textarea>
+        </div>
+        <img class="submit-button" src="img/xueba_submit.png" alt="" ng-click="register()"/>
+        <div class="xueba-qq-group">加入学霸QQ交流群： 194295870</div>
+    </div>
+</div>

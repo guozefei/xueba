@@ -1,0 +1,86 @@
+<div class="note-cards gray">
+    <div class="cards-container">
+        <div class="left-cards">
+            <div class="left-note card note-card" ng-repeat="note in leftNoteList">
+                <div>
+                    <div class="row note-title" ng-click="toShare(note)">
+                        <span>《{{note.title}}》</span>
+                    </div>
+                    <div class="row"  ng-click="$event.stopPropagation();" ui-sref="detail({userId : note.xueba.userId})">
+                        <div class="col-33 avatar-container">
+                            <img class="user-avatar" ng-src="{{note.xueba.photo}}"
+                                 alt="{{note.title}}"/>
+                        </div>
+                        <div class="col-67">
+                            <div class="row user-name-container">
+                                <i class="icon icon-user-name"></i>
+                                <span>{{note.xueba.name}}</span>
+                            </div>
+                            <div class="row user-campus-container">
+                                <i class="icon icon-user-campus"></i>
+                                <span>{{note.xueba.university}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-body" ng-click="toShare(note)">
+                    <div>
+                        {{note.description}}
+                    </div>
+                </div>
+
+                <div class="note-footer">
+                    <div class="view-times">
+                        <i class="icon icon-view-times"></i>
+                        浏览{{note.pvCount}}
+                    </div>
+                    <div class="star-times">
+                        <i class="icon icon-star-times"></i>
+                        收藏{{note.shareCount}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-cards">
+            <div class="right-note card note-card" ng-repeat="note in rightNoteList">
+                <div>
+                    <div class="row note-title" ng-click="toShare(note)">
+                        <span>《{{note.title}}》</span>
+                    </div>
+                    <div class="row" ng-click="$event.stopPropagation();" ui-sref="detail({userId : note.xueba.userId})">
+                        <div class="col-33 avatar-container">
+                            <img class="user-avatar" ng-src="{{note.xueba.photo}}"
+                                 alt="{{note.title}}"/>
+                        </div>
+                        <div class="col-67">
+                            <div class="row user-name-container">
+                                <i class="icon icon-user-name"></i>
+                                <span>{{note.xueba.name}}</span>
+                            </div>
+                            <div class="row user-campus-container">
+                                <i class="icon icon-user-campus"></i>
+                                <span>{{note.xueba.university}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-body" ng-click="toShare(note)">
+                    <div>
+                        {{note.description}}
+                    </div>
+                </div>
+
+                <div class="note-footer">
+                    <div class="view-times">
+                        <i class="icon icon-view-times"></i>
+                        浏览{{note.pvCount}}
+                    </div>
+                    <div class="star-times">
+                        <i class="icon icon-star-times"></i>
+                        收藏{{note.shareCount}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+.sprite_slide_joinnow {
+    background-image: url('../img/slide_joinnow.png');
+}
+
+.icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+%page-icon {
+    width: 28px !important;
+}
+
+.icon-home-page-active {
+    @extend %page-icon;
+    background-image: url('../img/home_page_active.png');
+}
+
+.icon-home-page {
+    @extend %page-icon;
+    background-image: url('../img/home_page.png');
+}
+
+.icon-view-times {
+  background-image: url('../img/review_times.png');
+}
+
+.icon-star-times {
+  background-image: url('../img/star_times.png');
+}
+
+.icon-gallery-page {
+    @extend %page-icon;
+    background-image: url('../img/gallery_page.png');
+}
+
+.icon-gallery-page-active {
+    @extend %page-icon;
+    background-image: url('../img/gallery_page_active.png');
+}
+
+.icon-join-page {
+    background-image: url('../img/join_page.png');
+    width: 35px !important;
+}
+
+.icon-hotestnote {
+    display: block;
+    background-image: url('../img/hotNote_deselect.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    &.selected {
+      background-image: url('../img/hotest_notes.png');
+    }
+}
+
+.icon-newestnote {
+    display: block;
+    background-image: url('../img/newest_notes.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    &.selected {
+      background-image: url('../img/newNote_active.png');
+    }
+}
+
+.icon-user-name {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-image: url('../img/user_name_icon.png');
+}
+
+.icon-user-campus {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-image: url('../img/user_campus_icon.png');
+}

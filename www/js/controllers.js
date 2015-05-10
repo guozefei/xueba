@@ -192,6 +192,7 @@
                 }
                 for(var i=0;i<$scope.noteList.length;i++) {
                     if (i % 2 == 0 ) {
+                        
                         $scope.leftNoteList.push($scope.noteList[i]);
                     } else {
                         $scope.rightNoteList.push($scope.noteList[i]);
